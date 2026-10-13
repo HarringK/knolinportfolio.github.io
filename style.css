@@ -1,0 +1,184 @@
+ :root{
+    --main-radius: 5px;
+    --main-padding: 5px;
+ }
+ 
+ 
+ body{
+    background-color: #CFDEE7;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .intro{
+            grid-area: intro;
+            text-align: center;
+            width:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px;
+            
+            
+        }
+        .skills{
+           text-align: center;
+            width:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px; 
+            
+        }
+        main{
+            grid-area:main;
+            border: 1px solid #0A369D;
+        }
+       
+
+        .intro p{
+            width:70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+         .intro img{
+            display:block;
+            width:70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .skills p{
+            text-align: left;
+            width:70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .projects{
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #0A369D;
+        }
+        .projects h1{
+            width: 100%;
+            text-align: center;
+        }
+        
+       #projects{
+        grid-area: project;
+       }
+       #intro{
+        grid-area: intro;
+       }
+       #skills{
+        grid-area: skills;
+       }
+        .each{
+            text-align: center;
+            width:33%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px;
+            
+        }
+        .each img{
+            display:block;
+            width:70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .each p{
+             width:70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        nav{
+            display:flex;
+            list-style: none;
+            justify-content: space-between;
+            border: 1px solid #0A369D;
+            background-color: #4472CA;
+    
+        }
+        header{
+            grid-area: header;
+    
+        }
+        footer{
+            grid-area: footer;
+            background-color: #4472CA;
+        }
+        #education{
+            grid-area: education;
+        }
+        #experience{
+            grid-area: experience;
+        }
+        .education{
+            text-align: center;
+            width:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px;
+            
+        }
+        .education p{
+           display:flex;
+            align-items: center;
+            gap:10px;
+        }
+        .education img{
+            width: 60%;
+        }
+        .experience{
+            text-align: center;
+            width:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px;
+        }
+
+        .container{
+            display:grid;
+            height:100vh;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 1fr 0.5fr;
+            gap: 0.5rem;
+
+            grid-template-areas:
+    
+            "header"
+            "main"
+            "footer"
+    ;
+        }
+        main{
+            display:grid;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            grid-template-areas: 
+            "intro skills"
+            "project project"
+            "education experience"
+            ;
+        }
+        @media (max-width: 500px){
+            main{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                gap:0.5rem;
+
+                grid-template-areas: 
+                "intro"
+                "skills"
+                "project"
+                "experience"
+                "education"
+                ;
+
+            }
+            .each{
+                width:100%
+            }
+        }
